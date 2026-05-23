@@ -36,10 +36,6 @@ export default function ShortenPage({ onShortened }) {
     }
   };
 
-  // const shortUrl = result
-  //   ? `http://localhost:10000/${result.shortCode}`
-  //   : "";
-
   const shortUrl = result
     ? `${API_BASE}/${result.shortCode}`
     : "";
