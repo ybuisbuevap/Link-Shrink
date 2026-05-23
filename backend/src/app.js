@@ -12,7 +12,7 @@ app.use(compression());
 
 app.use(cors({
   origin: [
-    "http://localhost:3000",
+    "http://localhost:5173",
     "https://shawty-link.vercel.app"
   ],
   methods: ["GET", "POST", "DELETE", "OPTIONS"],

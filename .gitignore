@@ -1,5 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
 .env
-node_modules
-logs
-dist
-coverage
+.env.local
+.env.production
+*.env
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
