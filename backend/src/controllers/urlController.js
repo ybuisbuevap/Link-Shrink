@@ -29,6 +29,7 @@ const createShortUrl = async (req, res) => {
       if (existingUrl) {
         return res.status(200).json({
           shortCode: existingUrl.shortCode,
+          shortUrl: `${BASE_URL}/${existingUrl.shortCode}`,  // ← ADD THIS
           originalUrl: existingUrl.originalUrl,
           clicks: existingUrl.clicks,
           expiresAt: existingUrl.expiresAt,
