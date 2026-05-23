@@ -4,14 +4,22 @@ const slidingWindowRateLimiter = require("./middlewares/rateLimiter");
 const helmet = require("helmet");
 const compression = require("compression");
 const cors = require("cors");
+
 const app = express();
+
 app.use(helmet());
 app.use(compression());
+
 app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "DELETE"],
+  origin: [
+    "http://localhost:3000",
+    "https://shawty-link.vercel.app"
+  ],
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  credentials: true,
 }));
 
+app.options("*", cors());
 
 app.set("trust proxy", 1);
 
@@ -21,4 +29,3 @@ app.use(express.json());
 app.use("/", urlRoutes);
 
 module.exports = app;
-
