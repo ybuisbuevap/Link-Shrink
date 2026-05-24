@@ -4,7 +4,7 @@ export default function Navbar({ activeTab, onTabChange }) {
   return (
     <header className="header">
       <div className="logo">
-        <span className="logo-dot" /> Snippr
+        <span className="logo-dot" /> Link-Shrink
       </div>
       <nav className="nav-tabs">
         {NAV_TABS.map((t) => (

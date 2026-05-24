@@ -57,7 +57,13 @@ export default function AnalyticsPage() {
         </div>
         <div className="global-stat">
           <div className="global-stat-label">Top Performer</div>
-          <div style={{ fontSize: "0.9rem", fontWeight: 600, marginTop: 4, wordBreak: "break-all" }}>
+          <div style={{ 
+            fontSize: "0.9rem", 
+            fontWeight: 600, 
+            marginTop: 4, 
+            wordBreak: "break-all",
+            color: "#FF9500"
+          }}>
             {topUrl ? (topUrl.shortCode || topUrl.shortId || topUrl.code || "—") : "—"}
           </div>
         </div>
@@ -66,8 +72,8 @@ export default function AnalyticsPage() {
       {/* ── Lookup ── */}
       <div
         style={{
-          background: "#fff",
-          border: "1px solid #e2e8f0",
+          background: "#0a0a0a",
+          border: "1px solid #1a1a1a",
           borderRadius: 12,
           padding: "1.25rem",
           marginBottom: "1.5rem",
@@ -79,6 +85,7 @@ export default function AnalyticsPage() {
             fontWeight: 700,
             fontSize: "0.9rem",
             marginBottom: "0.9rem",
+            color: "#ffffff",
           }}
         >
           Lookup URL Stats
@@ -105,10 +112,10 @@ export default function AnalyticsPage() {
           <div
             style={{
               marginTop: "1rem",
-              background: "#f8fafc",
+              background: "#000000",
               borderRadius: 9,
               padding: "1rem",
-              border: "1px solid #e2e8f0",
+              border: "1px solid #1a1a1a",
             }}
           >
             <div className="stat-row">
@@ -133,7 +140,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
             </div>
-            <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 6, wordBreak: "break-all" }}>
+            <div style={{ fontSize: "0.78rem", color: "#808080", marginTop: 6, wordBreak: "break-all" }}>
               {lookupResult.originalUrl || lookupResult.longUrl}
             </div>
           </div>
@@ -170,13 +177,13 @@ export default function AnalyticsPage() {
                 <div style={{ display: "flex", alignItems: "center", minWidth: 0 }}>
                   <span className={`rank-badge ${i === 0 ? "gold" : ""}`}>{i + 1}</span>
                   <div style={{ minWidth: 0 }}>
-                    <div style={{ fontWeight: 600, fontSize: "0.85rem", color: "#6366f1" }}>
+                    <div style={{ fontWeight: 600, fontSize: "0.85rem", color: "#FF9500" }}>
                       {code}
                     </div>
                     <div
                       style={{
                         fontSize: "0.72rem",
-                        color: "#64748b",
+                        color: "#808080",
                         whiteSpace: "nowrap",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
@@ -188,7 +195,7 @@ export default function AnalyticsPage() {
                   </div>
                 </div>
                 <div>
-                  <div style={{ fontWeight: 600 }}>{clicks}</div>
+                  <div style={{ fontWeight: 600, color: "#ffffff" }}>{clicks}</div>
                   <div className="click-bar-track" style={{ height: 5, width: 60, marginTop: 4 }}>
                     <div
                       className="click-bar-fill"
@@ -199,7 +206,7 @@ export default function AnalyticsPage() {
                     />
                   </div>
                 </div>
-                <div style={{ fontSize: "0.82rem", color: "#64748b" }}>
+                <div style={{ fontSize: "0.82rem", color: "#808080" }}>
                   {url.createdAt ? new Date(url.createdAt).toLocaleDateString() : "—"}
                 </div>
               </div>

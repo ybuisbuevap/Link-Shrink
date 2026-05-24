@@ -30,7 +30,7 @@ export default function ShortenPage({ onShortened }) {
       setExpiryInMinutes("");
     } catch (err) {
       if (err.rateLimited) setRateLimited(true);
-      else setError(err.message || "Cannot connect to backend. Is the server running on port 5000?");
+      else setError(err.message || "Cannot connect to backend.");
     } finally {
       setLoading(false);
     }
@@ -139,8 +139,8 @@ export default function ShortenPage({ onShortened }) {
       <div className="main-content">
         <div
           style={{
-            background: "#fff",
-            border: "1px solid #e2e8f0",
+            background: "#0a0a0a",
+            border: "1px solid #1a1a1a",
             borderRadius: 14,
             padding: "1.5rem",
           }}
@@ -151,6 +151,7 @@ export default function ShortenPage({ onShortened }) {
               fontWeight: 700,
               fontSize: "1rem",
               marginBottom: "1.1rem",
+              color: "#ffffff",
             }}
           >
             How it works
@@ -166,17 +167,17 @@ export default function ShortenPage({ onShortened }) {
               <div
                 key={f.title}
                 style={{
-                  background: "#f8fafc",
+                  background: "#000000",
                   borderRadius: 10,
                   padding: "1rem",
-                  border: "1px solid #e2e8f0",
+                  border: "1px solid #1a1a1a",
                 }}
               >
                 <div style={{ fontSize: "1.4rem", marginBottom: 6 }}>{f.icon}</div>
-                <div style={{ fontWeight: 600, fontSize: "0.88rem", marginBottom: 3 }}>
+                <div style={{ fontWeight: 600, fontSize: "0.88rem", marginBottom: 3, color: "#ffffff" }}>
                   {f.title}
                 </div>
-                <div style={{ fontSize: "0.78rem", color: "#64748b", lineHeight: 1.5 }}>
+                <div style={{ fontSize: "0.78rem", color: "#808080", lineHeight: 1.5 }}>
                   {f.desc}
                 </div>
               </div>
